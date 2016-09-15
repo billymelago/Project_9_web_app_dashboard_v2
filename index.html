@@ -390,7 +390,7 @@
                             </div><!-- /.switches_profile -->
                         </div><!-- /.switches -->
                         <div class="select_timezone">
-                            <select class="select-timezone" name="select">
+                            <select id="cmn-select-9" class="select-timezone" name="select">
                                 <option value="Select a timezone" selected="">Select a timezone</option>
                                 <option value="(GMT-12:00) International Date Line West">(GMT-12:00) International Date Line West</option>
                                 <option value="(GMT-11:00) Midway Island, Samoa">(GMT-11:00) Midway Island, Samoa</option>
@@ -477,8 +477,8 @@
                               </select>
                         </div><!-- /.select_timezone -->
                         <div class="btn-group">
-                          <button class="btn-default save" type="button" name="button">Save</button>
-                          <button class="btn-default cancel" type="button" name="button">Cancel</button>
+                          <button id="save" class="btn-default save" type="button" name="button">Save</button>
+                          <button id="cancel" class="btn-default cancel" type="button" name="button">Cancel</button>
                         </div>
 
                     </div><!-- /.settings --> 
@@ -490,6 +490,7 @@
         <footer>
             
         </footer> 
+        <script src="js/localStorage_Script.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/testChart.js"></script>
         <script>//* https://css-tricks.com/snippets/jquery/smooth-scrolling/
