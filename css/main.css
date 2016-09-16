@@ -84,14 +84,12 @@ ul {
     transform: scale()
 }
 
-
-
 header {
     z-index: 10000;
     background-color: #41CC4A;
 }
+
 .header_li {
-    
     margin: 0;
     padding: 5px;
     height: 60px;
@@ -108,12 +106,14 @@ header {
     font-size: 2.5em;
     color: #fff;
 }
+
 .notify_icon {
     height: 40px;
     width: 40px;
     cursor: pointer;
     transition: all .2s ease-in;
 }
+
 .notify_icon:before {
     opacity: .95;
     content: "3";
@@ -130,20 +130,23 @@ header {
     font-weight: bold;
     color: #FC2A77;
 }
+
 .dropdown {
     z-index: 200;
     display: inline-block;
 }
+
 .arrow {
     width: 0; 
-  height: 0; 
+    height: 0; 
     position: absolute;
     top: -1em;
     right: 40%;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
 }
+
 .dropdown_content {
     z-index: 300;
     display: none;
@@ -157,6 +160,7 @@ header {
     min-width: 160px;
     transition: all .4s ease-in;
 }
+
 .dropdown_content a {
     display: block;
     padding: 12px 16px;
@@ -164,10 +168,12 @@ header {
     font-weight: bold;
     border-radius: 8px;
 }
+
 .notify_icon .dropdown_content a:hover {
     background-color: #FFFC51;
     color: #000;
 }
+
 .notify_icon:hover .dropdown_content {
     display: block;
 }
@@ -179,6 +185,7 @@ header {
     border: solid 2px #fff;
     transition: all .2s ease;
 }
+
 .profile_pic:hover {
     padding: 0;
 }
@@ -195,11 +202,13 @@ header {
     width: 100%;
     background-color: #559E34;
 }
+
 .main_nav_ul {
     padding: 0;
     margin: 0;
     justify-content: space-around;
 }
+
 .main_nav li {
     width: 65px;
     height: 64px;
@@ -215,6 +224,7 @@ a {
     border-top: solid 6px transparent;
     transition: all .3s ease-in;
 }
+
 a:hover {
     border-top: solid 6px #FFFC51;
 }
@@ -238,16 +248,24 @@ a:hover {
     padding: 5px;
 }
 
+#main_search {
+    overflow: hidden;
+    width: 40%;
+}
+
+#main_search:focus {
+    background: #ccc;
+    color: #999;
+}
 
 .widget_area {
     padding-top: 14px;
     margin-bottom: 6em;
-    
 }
 
 .card {
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     background: ivory;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -256,8 +274,6 @@ a:hover {
 canvas {
     background: #fff;
     border-radius: 8px;
-    margin: 0 auto;
-    padding: .74em;
 }
 
 /********** TRAFFIC **********/
@@ -265,9 +281,8 @@ canvas {
 .traffic-tabs {
     display: flex;
     justify-content: flex-end;
-    
-    
 }
+
 .traffic-tabs-item span {
     flex-basis: 50px;
     margin: 6px;
@@ -275,16 +290,19 @@ canvas {
     border-radius: 12px;
     transition: all .3s ease-in-out;
 }
+
 .traffic-tabs-item span:hover,
 .traffic-tabs-item span:active {
     cursor: pointer;
     background: rgba(65,204,74, .8);
     color: #fff;
 }
+
 .traffic-tab {
     visibility: hidden;
     display: none;
 }
+
 .traffic-tabs-item .traffic-tab:checked+span {
     background: rgba(65,204,74, .8);
     color: #fff;
@@ -648,21 +666,25 @@ input.cmn-toggle-yes-no:checked + label:after {
         width: 100%;
         top: 0;
     }
+    
     .main_nav {
         top: 0;
         left: 0;
         padding-top: 60px;
         width: 80px;
     }
+    
     .main_nav_ul {
         display: flex;
         flex-flow: column;
         align-items: center;
     }
+    
     .main_nav_ul svg {
         width: 100%;
         height: 100%;
     }
+    
     .main_nav_ul li a {
         text-align: center;
         width: 60px;
@@ -671,10 +693,12 @@ input.cmn-toggle-yes-no:checked + label:after {
         border-top: transparent;
         border-left: solid 6px transparent;
     }
+    
     .main_nav_ul li a:hover {
         cursor: pointer;
         border-left: solid 6px #FFFC51;
     }
+    
     main {
         margin-left: 80px;
     }
@@ -690,11 +714,16 @@ input.cmn-toggle-yes-no:checked + label:after {
         flex-flow: row nowrap;
         justify-content: space-around;
     }
+    
     .card {
         flex-basis: 100%;
     }
     
+    canvas {
+        padding: 0;
+    }
     /********** TRAFFIC **********/
+
     .traffic_container {
         max-width: 90%;
         margin: auto;

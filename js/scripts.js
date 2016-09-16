@@ -25,9 +25,6 @@ $('form input').keydown(function (e) {
     }
 });
 
-
-
-
 var member_list = [
     "Bernadette", "Billy", "Erondu", "SpiltMilkStudios", "Nuraika", "Su", "Rogie", "Jono","REM", "Brynn", "John", "Sean"
 ];
@@ -38,16 +35,14 @@ $("#autocomplete").autocomplete({
     delay: 0
 }).autocomplete("widget").addClass("fixed-height");
 
-
-
 $("#send-message").click(function() {
     var member = $("#autocomplete").val();
     var message = $("#message").val();
     if (validation()) {
-        
         $("form").submit();
     }
 })
+
 //make sure member name is selected and there is content in text box before sending message
 function validation() {
     var member = document.getElementById("autocomplete").value;
@@ -89,15 +84,3 @@ function validation() {
         return false;
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-

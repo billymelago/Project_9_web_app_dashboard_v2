@@ -4,14 +4,14 @@ Chart.defaults.global.responsive = true;
 Chart.defaults.global.title.display = true;
 Chart.defaults.global.title.text ="MyAPP";
 Chart.defaults.global.legend.position = 'bottom';
-
+Chart.defaults.global.defaultFontSize = 10;
 var dData = function() {
     return Math.round(Math.random() * 3000) + 10
 };
 
-
 var CHART = document.getElementById('myTrafficChart');
 console.log(CHART);
+
 var lineChart = new Chart(CHART, {
     type: 'line',
     data: {
@@ -62,7 +62,6 @@ var lineChart = new Chart(CHART, {
             data: [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()],
             spanGaps: false,
         }
-          
     ]
     },
     options: {
@@ -75,7 +74,9 @@ var lineChart = new Chart(CHART, {
         }
     }
 });
+
 var barChart = document.getElementById("barChart");
+
 var dailyTrafficChart = new Chart(barChart, {
   type: 'bar',
   data: {
@@ -104,6 +105,7 @@ var dailyTrafficChart = new Chart(barChart, {
 });
 
 var doughnutChart = document.getElementById("doughnutChart");
+
 var mobileUsersChart = new Chart(doughnutChart, {
     type: 'doughnut',
     data: {
@@ -139,45 +141,40 @@ var mobileUsersChart = new Chart(doughnutChart, {
         }
 });
 
-
-
-
-
 var hourly = document.getElementById('hourly'),
     daily = document.getElementById('daily'),
     weekly = document.getElementById('weekly'),
     monthly = document.getElementById('monthly');
+
 hourly.addEventListener('click', function () {
-console.log('hourly');
-lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    console.log('hourly');
+    lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
+    lineChart.update();
     lineChart.data.datasets[1].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    lineChart.update();
 });
 
 daily.addEventListener('click', function () {
-console.log('daily');
-lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    console.log('daily');
+    lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
+    lineChart.update();
     lineChart.data.datasets[1].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    lineChart.update();
 });
 
 weekly.addEventListener('click', function () {
-console.log('weekly');
-lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    console.log('weekly');
+    lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
+    lineChart.update();
     lineChart.data.datasets[1].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    lineChart.update();
 });
 
 monthly.addEventListener('click', function () {
-console.log('monthly');
-lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    console.log('monthly');
+    lineChart.data.datasets[0].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
+    lineChart.update();
     lineChart.data.datasets[1].data = [dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData(), dData()];
-lineChart.update();
+    lineChart.update();
 });
-
-
-        
+ 
