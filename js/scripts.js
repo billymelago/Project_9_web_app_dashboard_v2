@@ -17,7 +17,7 @@
 $('form input').keydown(function (e) {
     if (e.keyCode == 13) {
         var inputs = $(this).parents("form").eq(0).find(":input");
-        if (inputs[inputs.index(this) + 1] != null) {                    
+        if (inputs[inputs.index(this) + 1] !== null) {                    
             inputs[inputs.index(this) + 1].focus();
         }
         e.preventDefault();
@@ -41,7 +41,7 @@ $("#send-message").click(function() {
     if (validation()) {
         $("form").submit();
     }
-})
+});
 
 //make sure member name is selected and there is content in text box before sending message
 function validation() {
@@ -83,4 +83,4 @@ function validation() {
         });
         return false;
     }
-};
+}

@@ -52,18 +52,12 @@ ul {
     text-transform: uppercase;
     background-color: #FC2A77;
     background: rgba(252,42,119,1);
-    background: -moz-linear-gradient(top, rgba(252,42,119,1) 0%, rgba(252,128,174,0.97) 53%, rgba(252,42,119,0.95) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,42,119,1)), color-stop(53%, rgba(252,128,174,0.97)), color-stop(100%, rgba(252,42,119,0.95)));
     background: -webkit-linear-gradient(top, rgba(252,42,119,1) 0%, rgba(252,128,174,0.97) 53%, rgba(252,42,119,0.95) 100%);
-    background: -o-linear-gradient(top, rgba(252,42,119,1) 0%, rgba(252,128,174,0.97) 53%, rgba(252,42,119,0.95) 100%);
-    background: -ms-linear-gradient(top, rgba(252,42,119,1) 0%, rgba(252,128,174,0.97) 53%, rgba(252,42,119,0.95) 100%);
     background: linear-gradient(to bottom, rgba(252,42,119,1) 0%, rgba(252,128,174,0.97) 53%, rgba(252,42,119,0.95) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc2a77', endColorstr='#fc2a77', GradientType=0 );
     margin:0 auto 15px;
     width: 100%;
     border-radius: 18px;
-    -webkit-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.15);
     box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.15);
 }
 
@@ -81,7 +75,6 @@ ul {
 /* When moving the mouse over the close button */
 .closebtn:hover {
     color: #41CC4A;
-    transform: scale()
 }
 
 header {
@@ -97,7 +90,6 @@ header {
     -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center;
-    background-color: ;
 }
 
 .logo {
@@ -111,6 +103,7 @@ header {
     height: 40px;
     width: 40px;
     cursor: pointer;
+    -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
 
@@ -158,6 +151,7 @@ header {
     background: rgba(65,204,74, .6);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 160px;
+    -webkit-transition: all .4s ease-in;
     transition: all .4s ease-in;
 }
 
@@ -183,6 +177,7 @@ header {
     height: 50px;
     padding: 2px;
     border: solid 2px #fff;
+    -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
 
@@ -206,6 +201,7 @@ header {
 .main_nav_ul {
     padding: 0;
     margin: 0;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -222,6 +218,7 @@ a {
     padding: 4px;
     display: block;
     border-top: solid 6px transparent;
+    -webkit-transition: all .3s ease-in;
     transition: all .3s ease-in;
 }
 
@@ -279,15 +276,21 @@ canvas {
 /********** TRAFFIC **********/
 
 .traffic-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
 .traffic-tabs-item span {
+    -ms-flex-preferred-size: 50px;
     flex-basis: 50px;
     margin: 6px;
     padding: 6px 12px;
     border-radius: 12px;
+    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 
@@ -337,6 +340,7 @@ canvas {
     border-radius: 8px;
     margin: 5px;
     padding: .60em;
+    -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
 .social_SVG {
@@ -406,6 +410,7 @@ canvas {
     padding: .60em;
     margin-bottom: .45em;
     border-bottom: solid 2px #FC2A77;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
 .member_li:hover {
@@ -566,9 +571,25 @@ h3 {
     padding-bottom: 60px;
 }
 
+.settings span {
+    display: block;
+    width: 100%;
+}
+
+.switches {
+    display: block;
+    margin: auto;
+}
+
 .switches_notifications {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: .65em;
 }
@@ -593,9 +614,8 @@ h3 {
 }
 input.cmn-toggle-yes-no + label {
     padding: 2px;
-    width 120px;
+    width: 120px;
     height: 60px;
-    
 }
 input.cmn-toggle-yes-no + label:before,
 input.cmn-toggle-yes-no + label:after {
@@ -614,30 +634,47 @@ input.cmn-toggle-yes-no + label:after {
 input.cmn-toggle-yes-no + label:before {
     background-color: #FC2A77;
     content: attr(data-off);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 8px;
 }
 input.cmn-toggle-yes-no + label:after {
     background-color: #41CC4A;
     content: attr(data-on);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 8px;
 }
 input.cmn-toggle-yes-no:checked + label:before {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 input.cmn-toggle-yes-no:checked + label:after {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
 }
 
 
 
 .switches_profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -675,8 +712,13 @@ input.cmn-toggle-yes-no:checked + label:after {
     }
     
     .main_nav_ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-flow: column;
         flex-flow: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     
@@ -710,12 +752,17 @@ input.cmn-toggle-yes-no:checked + label:after {
     
     
     .double_card {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
     
     .card {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
     
@@ -731,11 +778,18 @@ input.cmn-toggle-yes-no:checked + label:after {
     
     /********** SOCIAL STATS **********/
     .social_UL {
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     .social_li {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
     }
 }
 
