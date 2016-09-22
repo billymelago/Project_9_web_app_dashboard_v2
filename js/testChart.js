@@ -6,7 +6,7 @@ Chart.defaults.global.title.text ="MyAPP";
 Chart.defaults.global.legend.position = 'bottom';
 Chart.defaults.global.defaultFontSize = 10;
 var dData = function() {
-    return Math.round(Math.random() * 3000) + 10
+    return Math.round(Math.random() * 3000) + 10;
 };
 
 var CHART = document.getElementById('myTrafficChart');
@@ -20,7 +20,7 @@ var lineChart = new Chart(CHART, {
         {
             label: "2016",
             fill: true,
-            lineTension: .04,
+            lineTension: 0.04,
             backgroundColor: "rgba(65,204,74,0.8)",
             borderColor: "rgba(85,158,52,1)",
             borderWidth: 2,
@@ -42,7 +42,7 @@ var lineChart = new Chart(CHART, {
         }, {
             label: "2015",
             fill: true,
-            lineTension: .04,
+            lineTension: 0.04,
             backgroundColor: "rgba(252,42,119,0.8)",
             borderColor: "rgba(252,42,119,1)",
             borderWidth: 2,

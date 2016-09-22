@@ -97,6 +97,7 @@ header {
     font-family: 'Sigmar One', cursive;
     font-size: 2.5em;
     color: #fff;
+    cursor: pointer;
 }
 
 .notify_icon {
@@ -626,7 +627,6 @@ input.cmn-toggle-yes-no + label:after {
     bottom: 0;
     right: 0;
     color: #fff;
-    font-family: ;
     font-size: 1.5em;
     text-align: center;
     line-height: 60px;/* 60px */
